@@ -1,0 +1,20 @@
+<header>
+	Comic Book Trakker.
+	{{ user }}
+</header>
+
+<section>
+	<span ng-click="showComics()">Comics</span><span ng-click="showCreators()">Creators</span>
+	<div ng-show="app.state=='comics'" ng-controller="ComicListCtrl">
+		<input ng-model="list.filter">
+		<comic-list-item ng-repeat="comic in list.comics | filter:list.filter"></comic-list-item>
+		<!-- <li ng-repeat="comic in list.comics | filter:list.filter"><comic-list-item></comic-list-item></li> -->
+	</div>
+
+	<div ng-show="app.state=='creators'" ng-controller="CreatorListCtrl">
+		<input ng-model="list.filter">
+		<creator-list-item ng-repeat="creator in list.creators | filter:list.filter">
+	</div>
+
+	</div>	
+</section>
