@@ -1,8 +1,6 @@
 'use strict';
 
-var Creators = angular.module('Creators', ['lodash']);
-
-Creators
+angular.module('Creators', ['lodash'])
   .factory('Creators', ['_', function(_){
     var Creators = [
       {

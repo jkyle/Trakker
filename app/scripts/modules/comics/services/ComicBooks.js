@@ -1,8 +1,6 @@
 'use strict';
 
-var Comics = angular.module('Comics', ['lodash']);
-
-Comics
+angular.module('Comics', ['lodash'])
   .factory('ComicBooks', ['_', function(_){
     var ComicBooks = [
       {
